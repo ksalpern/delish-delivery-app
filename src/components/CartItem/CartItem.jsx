@@ -27,23 +27,17 @@ const CartItem = ({ id, count, imageUrl, price, name }) => {
 
   return (
     <div className='cartItem'>
-      <div className='cartItem__top'>
-        <div className='cartItem__img'>
-          <img src={imageUrl} alt={name} />
-        </div>
+      <div className='cartItem__img'>
+        <img src={imageUrl} alt={name} />
         <h3>{name}</h3>
-        <div className='cartItem__quantity'>
-          <button>-</button>
-          <span>1</span>
-          <button>+</button>
-        </div>
-        <div className='cartItem__price'>
-          <span>10₴</span>
-        </div>
       </div>
-      <div className='cartItem__bottom'>
-        <button>Go to home page</button>
-        <h4>Total price: </h4>
+      <div className='cartItem__quantity'>
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+      </div>
+      <div className='cartItem__price'>
+        <span>10₴</span>
       </div>
     </div>
   )

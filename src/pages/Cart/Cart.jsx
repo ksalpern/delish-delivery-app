@@ -25,6 +25,8 @@ const Cart = () => {
       {items.map(item => (
         <CartItem key={item.id} {...item} />
       ))}
+        <button>Go to home page</button>
+        <h4>Total price: </h4>
     </div>
   )
 }
