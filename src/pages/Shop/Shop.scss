@@ -2,7 +2,6 @@
   padding: 25px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 
   &__top {
     display: flex;
@@ -19,8 +18,15 @@
     -o-border-radius: 75% 50px 20% 50px;
 
     img {
+      display: block;
       width: 100%;
       height: fit-content;
     }
+  }
+  &__goods {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 }
