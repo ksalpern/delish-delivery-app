@@ -8,8 +8,8 @@ const ShopCard = ({ id, name, description, products, imageUrl }) => {
     <div className='shopCard'>
       <div className='shopCard__img'>
         <img src={imageUrl} alt={name} />
+        <h3>{name}</h3>
       </div>
-      <h3>{name}</h3>
       <p>{description}</p>
       <Link to={`/${id}`}>BUY PRODUCTS</Link>
     </div>
