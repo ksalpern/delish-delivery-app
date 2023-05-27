@@ -20,7 +20,7 @@ const Header = () => {
         {pathname !== '/' && (
           <Link to='/cart' className='header__cart'>
             <img src='assets/cart.svg' alt='go to cart' />
-            <span>{totalQuantity}</span>
+            {totalQuantity > 0 && <span>{totalQuantity}</span>}
           </Link>
         )}
       </div>
