@@ -11,7 +11,6 @@ const Home = () => {
     axios
       .get('https://6471f2e36a9370d5a41adc0b.mockapi.io/shops')
       .then(res => setShops(res.data))
-    console.log(shops)
   }, [])
 
   return (
