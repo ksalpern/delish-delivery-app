@@ -13,9 +13,16 @@ const Header = () => {
 
   return (
     <div className='header'>
-      <Link to='/' className='header__logo'>
-        <h2>Delish</h2>
-      </Link>
+      <div className='header__link'>
+        <Link to='/'>
+          <h2>Delish</h2>
+        </Link>
+      </div>
+      <div className='header__logo'>
+        <div className='logo__container'>
+          <img src='/assets/logo.png' alt='' />
+        </div>
+      </div>
       <div className='header__icons'>
         {pathname !== '/' && (
           <Link to='/cart' className='header__cart'>

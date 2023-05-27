@@ -11,7 +11,9 @@ const ShopCard = ({ id, name, description, products, imageUrl }) => {
         <h3>{name}</h3>
       </div>
       <p>{description}</p>
-      <Link to={`/${id}`}>BUY PRODUCTS</Link>
+      <button>
+        <Link to={`/${id}`}>BUY PRODUCTS</Link>
+      </button>
     </div>
   )
 }

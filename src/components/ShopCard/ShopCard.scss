@@ -36,20 +36,4 @@
       -o-border-radius: 30px;
     }
   }
-
-  a {
-    background-color: $dark-color;
-    padding: 5px;
-    font-weight: 600;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-
-    &:hover {
-      scale: 1.1;
-      opacity: .9;
-    }
-  }
 }
