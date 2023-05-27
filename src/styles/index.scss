@@ -31,6 +31,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $background-color;
+  color: $text-color
 }
 
 code {
@@ -38,7 +39,15 @@ code {
     monospace;
 }
 
-.app{
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $text-color;
+}
+
+.app {
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
@@ -46,11 +55,19 @@ code {
   flex-direction: column;
 }
 
-p{
+h2 {
   font-size: 24px;
-  font-weight: 600;
 }
 
-span{
+h3 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+span {
   font-size: 14px;
 }

@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.shopCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    overflow: hidden;
+    border-radius: 150px 250px 30px 100px;
+    -webkit-border-radius: 150px 250px 30px 100px;
+    -moz-border-radius: 150px 250px 30px 100px;
+    -ms-border-radius: 150px 250px 30px 100px;
+    -o-border-radius: 150px 250px 30px 100px;
+    max-width: 250px;
+
+    img {
+      width: 100%;
+      height: fit-content;
+    }
+  }
+
+  a {
+    background-color: $dark-color;
+    padding: 5px;
+    font-weight: 600;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+ 
+}
