@@ -29,10 +29,10 @@ const CartItem = ({ id, count, imageUrl, price, name }) => {
     <div className="cartItem">
       <div className="cartItem__img">
         <img src={imageUrl} alt={name} />
-        <h3>{name}</h3>
       </div>
       <div className="cartItem__info">
         <div className="cartItem__quantity">
+          <h3>{name}</h3>
           <button
             onClick={handleMinus}
             disabled={count === 1}
