@@ -14,8 +14,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/:shopId" element={<Shop />} />
         <Route path="/orders" element={<Orders />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/cart/form" element={<Form />} />
+        <Route path="/:shopId/cart" element={<Cart />} />
+        <Route path="/:shopId/cart/form" element={<Form />} />
         {/*
         <Route
           path="*" element={<NotFoundBlock />} /> */}

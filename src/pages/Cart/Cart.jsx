@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { clearProducts, selectCart } from '../../redux/cart/slice'
+import { clearProducts, selectCart, selectShopId } from '../../redux/cart/slice'
 
 import CartEmpty from '../../components/CartEmpty/CartEmpty'
 import CartItem from '../../components/CartItem/CartItem'
@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
   const dispatch = useDispatch()
+  const currentShop = useSelector(selectShopId)
   const { items, totalPrice } = useSelector(selectCart)
 
   const handleClear = () => {
@@ -31,16 +32,16 @@ const Cart = () => {
       </div>
       <div className='cart__buttons'>
         <button>
-          <img src='assets/back.svg' alt='' />
-          <Link to='/'> Go to home page</Link>
+          <img src='/assets/back.svg' alt='' />
+          <Link to={`/${currentShop}`}>Go back to shop</Link>
         </button>
         <button onClick={handleClear}>
-          <img src='assets/delete.svg' alt='' />
+          <img src='/assets/delete.svg' alt='' />
           Clear the cart
         </button>
         <button>
-          <img src='assets/order.svg' alt='' />
-          <Link to='/cart/form'>Chekout</Link>
+          <img src='/assets/order.svg' alt='' />
+          <Link to={`/${currentShop}/cart/form`}>Chekout</Link>
         </button>
       </div>
       <h4>Total price: {totalPrice.toFixed(2)} ₴</h4>

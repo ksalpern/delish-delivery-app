@@ -54,7 +54,7 @@ const CartItem = ({ id, count, imageUrl, price, name }) => {
         </div>
       </div>
       <button onClick={handleRemove} className="cartItem__delete">
-        <img src="assets/delete.svg" alt="" />
+        <img src="/assets/delete.svg" alt="" />
       </button>
     </div>
   );

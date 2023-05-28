@@ -82,7 +82,7 @@ span {
 }
 
 button {
-  padding: 10px;
+  padding: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -91,6 +91,7 @@ button {
   font-size: 18px;
   background-color: $light-purple;
   color: $text-color;
+  font-weight: 500;
 
   &:hover {
     background-color: $text-color;

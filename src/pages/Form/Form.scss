@@ -1,3 +1,20 @@
-.orderForm{
+@import '../../styles/variables.scss';
+.orderForm {
   padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  form{width: 50%;}
+  label {
+    // background-color: red;
+    display: flex;
+    border-bottom: 1px solid $border-color;
+  }
+  input,
+  textarea {
+    background: rgba(255, 255, 255, 0.23);
+    border: none;
+    outline: none;
+    width: 100%;
+  }
 }

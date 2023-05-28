@@ -37,7 +37,7 @@ export const cartSlice = createSlice({
       }
       state.totalPrice = calcTotalPrice(state.items);
     },
-    setShop(state, action) {
+    setShopId(state, action) {
       state.currentShop = action.payload
     }
   },
@@ -47,7 +47,8 @@ export const selectCartItemById = (id) => (state) =>
   state.cart.items.find(obj => obj.id === id)
 export const selectCart = (state) => state.cart
 export const selectCartItems = state => state.cart.items
+export const selectShopId = state => state.cart.currentShop
 
-export const { addProduct, removeProduct, clearProducts, minusProduct, setShop } = cartSlice.actions
+export const { addProduct, removeProduct, clearProducts, minusProduct, setShopId } = cartSlice.actions
 
 export default cartSlice.reducer
