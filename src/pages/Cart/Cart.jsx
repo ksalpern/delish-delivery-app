@@ -30,6 +30,9 @@ const Cart = () => {
         <Link to='/'> Go to home page</Link>
       </button>
       <button onClick={handleClear}>Clear the cart</button>
+      <button>
+        <Link to='/cart/form'>Chekout</Link>
+      </button>
       <h4>Total price: {totalPrice} ₴</h4>
     </div>
   )
