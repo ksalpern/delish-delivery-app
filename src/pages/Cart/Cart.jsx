@@ -23,17 +23,26 @@ const Cart = () => {
 
   return (
     <div className='cart'>
-      {items.map(item => (
-        <CartItem key={item.id} {...item} />
-      ))}
-      <button>
-        <Link to='/'> Go to home page</Link>
-      </button>
-      <button onClick={handleClear}>Clear the cart</button>
-      <button>
-        <Link to='/cart/form'>Chekout</Link>
-      </button>
-      <h4>Total price: {totalPrice} ₴</h4>
+      <div className='cart__items'>
+        {items.map(item => (
+          <CartItem key={item.id} {...item} />
+        ))}
+      </div>
+      <div className='cart__buttons'>
+        <button>
+          <img src='assets/back.svg' alt='' />
+          <Link to='/'> Go to home page</Link>
+        </button>
+        <button onClick={handleClear}>
+          <img src='assets/delete.svg' alt='' />
+          Clear the cart
+        </button>
+        <button>
+          <img src='assets/order.svg' alt='' />
+          <Link to='/cart/form'>Chekout</Link>
+        </button>
+      </div>
+      <h4>Total price: {totalPrice.toFixed(2)} ₴</h4>
     </div>
   )
 }

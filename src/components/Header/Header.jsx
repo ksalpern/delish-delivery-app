@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { selectCart } from '../../redux/cart/slice'
@@ -8,8 +8,17 @@ import './Header.scss'
 const Header = () => {
   const { items } = useSelector(selectCart)
   const { pathname } = useLocation()
+  const isMounted = useRef(false);
 
   const totalQuantity = items.reduce((sum, item) => sum + item.count, 0)
+
+  useEffect(() => {
+    if (isMounted.current) {
+      const json = JSON.stringify(items);
+      localStorage.setItem('cart', json);
+    }
+    isMounted.current = true;
+  }, [items]);
 
   return (
     <div className='header'>
