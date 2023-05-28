@@ -59,9 +59,16 @@ const Header = () => {
   return (
     <div className='header'>
       <div className='header__link'>
-        <button onClick={confirmClearCart}>
-          <h2>Delish</h2>
-        </button>
+        {cartItems.length > 0 ? (
+          <button onClick={confirmClearCart}>
+            <h2>Delish</h2>
+          </button>
+        ) : (
+          <Link to='/'>
+            {' '}
+            <h2>Delish</h2>
+          </Link>
+        )}
       </div>
       <div className='header__logo'>
         <img src='/assets/logo.png' alt='' />
