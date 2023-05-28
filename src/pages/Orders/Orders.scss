@@ -1,3 +1,13 @@
 .orders{
   padding: 80px 20px;
+
+  &__search{
+    position: relative;
+
+    &-cross{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
 }

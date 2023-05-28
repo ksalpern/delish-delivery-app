@@ -56,29 +56,29 @@ code {
   min-height: 100vh;
 }
 
-h1{
-  font-size: 40px;
+h1 {
+  font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
 }
 
 h2 {
-  font-size: 32px;
+  font-size: calc(22px + (32 - 22) * ((100vw - 320px) / (1920 - 320)));
 }
 
 h3 {
-  font-size: 30px;
+  font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
 }
 
 h4 {
-  font-size: 26px;
+  font-size: calc(16px + (26 - 16) * ((100vw - 320px) / (1920 - 320)));
 }
 
 p {
-  font-size: 20px;
+  font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
   font-weight: 500;
 }
 
 span {
-  font-size: 18px;
+  font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
 }
 
 button {
@@ -105,5 +105,32 @@ button {
   &:hover {
     background-color: $gray;
     color: $text-color;
+  }
+}
+
+//doesn't let font sizes grow in more than 1920px screen sizes
+@media (min-width: 1920px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  span {
+    font-size: 18px;
   }
 }

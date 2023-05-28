@@ -36,6 +36,9 @@ export const cartSlice = createSlice({
         findItem.count--
       }
       state.totalPrice = calcTotalPrice(state.items);
+    },
+    setShop(state, action) {
+      state.currentShop = action.payload
     }
   },
 })
@@ -45,6 +48,6 @@ export const selectCartItemById = (id) => (state) =>
 export const selectCart = (state) => state.cart
 export const selectCartItems = state => state.cart.items
 
-export const { addProduct, removeProduct, clearProducts, minusProduct } = cartSlice.actions
+export const { addProduct, removeProduct, clearProducts, minusProduct, setShop } = cartSlice.actions
 
 export default cartSlice.reducer

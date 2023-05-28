@@ -8,5 +8,6 @@ export const getCartFromLS = () => {
   return {
     items: items,
     totalPrice,
+    currentShop: null
   };
 };
