@@ -6,9 +6,7 @@ import './CartEmpty.scss'
 const CartEmpty = () => {
   return (
     <div className='cartEmpty'>
-      <h2>
-        The cart is empty <span>😕</span>
-      </h2>
+      <h1>The cart is empty 😕</h1>
       <p>Most likely, you have not selected products yet.</p>
       <img src='/assets/empty-cart.png' alt='Empty cart' />
       <Link to='/'>

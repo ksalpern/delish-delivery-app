@@ -32,13 +32,22 @@ const CartItem = ({ id, count, imageUrl, price, name }) => {
         <h3>{name}</h3>
       </div>
       <div className='cartItem__quantity'>
-        <button>-</button>
-        <span>1</span>
-        <button>+</button>
+        <button
+          onClick={handleMinus}
+          disabled={count === 1}
+          className={`${count === 1 ?'disabled' : ''}`}
+        >
+          -
+        </button>
+        <span>{count}</span>
+        <button onClick={handlePlus}>+</button>
       </div>
       <div className='cartItem__price'>
-        <span>10₴</span>
+        <span>{price}₴</span>
       </div>
+      <button onClick={handleRemove} className='cartItem__cross'>
+        x
+      </button>
     </div>
   )
 }

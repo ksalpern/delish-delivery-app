@@ -2,9 +2,10 @@
 
 .cartItem {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 50px;
+  position: relative;
 
   &__img {
     position: relative;
@@ -43,6 +44,18 @@
   &__quantity{
     display: flex;
     gap: 10px;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  &__cross{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
     align-items: center;
     justify-content: center;
   }
