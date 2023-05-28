@@ -29,15 +29,6 @@ const formSlice = createSlice({
     addOrder: (state, action) => {
       state.user.orders.push(action.payload);
     },
-    // addOrder: (state, action) => {
-    //   const newOrder = {
-    //     id: Date.now().toString(),
-    //     createdAt: new Date().toISOString(),
-    //     ...action.payload,
-    //   };
-
-    //   state.user.orders.push(newOrder);
-    // },
     resetForm: (state) => {
       state.user.name = '';
       state.user.email = '';

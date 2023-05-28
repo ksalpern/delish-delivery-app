@@ -67,6 +67,10 @@
       font-weight: 600;
     }
   }
+  &__price{
+    width: 100%;
+    text-align: end;
+  }
   .ingredients {
     overflow-y: auto;
     max-height: 186px;
