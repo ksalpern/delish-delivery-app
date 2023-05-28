@@ -8,7 +8,7 @@ import {
   addOrder,
   resetForm,
 } from '../../redux/form/slice';
-import { selectCartItems } from '../../redux/cart/slice';
+import { clearProducts, selectCartItems } from '../../redux/cart/slice';
 import axios from 'axios';
 
 import './Form.scss';
@@ -28,7 +28,6 @@ const OrderForm = () => {
       phone: phone,
       address: address,
       order: cartItems,
-      // order: cartItems.map((item) => ({ ...item, id: Date.now().toString(), createdAt: new Date().toISOString() })),
     };
 
     try {
@@ -37,15 +36,12 @@ const OrderForm = () => {
         'https://6471f2e36a9370d5a41adc0b.mockapi.io/users',
         formData,
       );
-
       // Add the order to the user's orders array
       dispatch(addOrder(response.data));
-
-      // Handle the response from the API
-      console.log(response.data);
-
       // Reset the form
       dispatch(resetForm());
+      // clear cart products
+      dispatch(clearProducts())
     } catch (error) {
       // Handle any errors that occurred during the POST request
       console.error(error);

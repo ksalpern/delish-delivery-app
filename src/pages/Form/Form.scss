@@ -6,7 +6,8 @@
   align-items: center;
 
   form {
-    width:  calc(200px + (300 - 200) * ((100vw - 320px) / (1920 - 320)));;
+    width:  calc(300px + (600 - 300) * ((100vw - 320px) / (1920 - 320)));
+    max-width: 600px;
   }
   label {
     display: flex;
@@ -18,7 +19,7 @@
   }
   input,
   textarea {
-    background: rgba(255, 255, 255, 0.23);
+    background: rgba(255, 255, 255, 0.1);
     border: none;
     outline: none;
     width: 100%;
