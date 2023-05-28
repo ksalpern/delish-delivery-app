@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+
 .orderForm {
   padding: 80px 20px;
   display: flex;
@@ -6,19 +7,22 @@
   align-items: center;
 
   form {
-    width:  calc(300px + (600 - 300) * ((100vw - 320px) / (1920 - 320)));
+    width: calc(300px + (600 - 300) * ((100vw - 320px) / (1920 - 320)));
     max-width: 600px;
   }
+
   label {
     display: flex;
     border-bottom: 1px solid $border-color;
+
     p {
-      // width: fit-content;
       white-space: nowrap;
     }
   }
+
   input,
   textarea {
+    padding: 5px;
     background: rgba(255, 255, 255, 0.1);
     border: none;
     outline: none;

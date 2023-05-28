@@ -45,7 +45,10 @@ const Orders = () => {
 
   return (
     <div className='orders'>
-      <h1>Put your email / address / phone number to see your orders</h1>
+      <h1>
+        Put your email / address / phone number and press 'Search' to see your
+        orders
+      </h1>
       <div className='orders__search'>
         <input
           type='text'
@@ -54,29 +57,32 @@ const Orders = () => {
           onChange={e => setSearchText(e.target.value)}
           placeholder='Search by email, address, or phone number'
         />
-        {searchText && <span className='orders__search-cross' onClick={onClickClear}>x</span>}
-        <button onClick={handleSearch}>Search</button>
+        {searchText && (
+          <span className='orders__search-cross' onClick={onClickClear}>
+            x
+          </span>
+        )}
       </div>
+      <button onClick={handleSearch}>Search</button>
 
-      <div>
-        {searchResults.map(user => (
-          <div key={user.id}>
-            <h2>{user.name}</h2>
-            <img src={user.avatar} alt='User Avatar' />
-            <p>Email: {user.email}</p>
-            <p>Address: {user.address}</p>
-            <p>Order was created: {formatDateTime(user.createdAt)}</p>
-            {/* Display order details here */}
-            <ul>
-              {user.order.map(order => (
-                <li key={order.id}>
-                  {order.name} - ₴{order.price}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+      {searchResults.map(user => (
+        <div key={user.id} className='orders__users'>
+          <h2>{user.name}</h2>
+          <img src={user.avatar} alt='User Avatar' />
+          <p>Email: {user.email}</p>
+          <p>Address: {user.address}</p>
+          <p>Order was created: {formatDateTime(user.createdAt)}</p>
+          <ul>
+            {user.order.map(order => (
+              <li key={order.id}>
+                <h4>
+                  {order.name} - ₴ {order.price}
+                </h4>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   )
 }
