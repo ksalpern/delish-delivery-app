@@ -1,0 +1,4 @@
+.mapComponent{
+  width: calc(300px + (600 - 300) * ((100vw - 320px) / (1920 - 320)));
+  height: 500px;
+}

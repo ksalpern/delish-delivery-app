@@ -12,6 +12,7 @@ import {
 import { clearProducts, selectCartItems } from '../../redux/cart/slice'
 import axios from 'axios'
 
+import MapComponent from '../../components/MapComponent/MapComponent'
 import './Form.scss'
 
 const OrderForm = () => {
@@ -55,48 +56,52 @@ const OrderForm = () => {
   return (
     <div className='orderForm'>
       <h1>Add your info to make an order</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <p>Name:</p>
-          <input
-            type='text'
-            value={name}
-            onChange={e => dispatch(setName(e.target.value))}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          <p>Email:</p>
-          <input
-            type='email'
-            value={email}
-            onChange={e => dispatch(setEmail(e.target.value))}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          <p>Phone Number:</p>
-          <input
-            type='tel'
-            value={phone}
-            onChange={e => dispatch(setPhone(e.target.value))}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          <p>Address:</p>
-          <textarea
-            value={address}
-            onChange={e => dispatch(setAddress(e.target.value))}
-            required
-          />
-        </label>
-        <br />
-        <button type='submit'>Place Order</button>
-      </form>
+      <div className='orderForm__info'>
+        <form onSubmit={handleSubmit}>
+          <label>
+            <p>Name:</p>
+            <input
+              type='text'
+              value={name}
+              onChange={e => dispatch(setName(e.target.value))}
+              required
+            />
+          </label>
+          <br />
+          <label>
+            <p>Email:</p>
+            <input
+              type='email'
+              value={email}
+              onChange={e => dispatch(setEmail(e.target.value))}
+              required
+            />
+          </label>
+          <br />
+          <label>
+            <p>Phone Number:</p>
+            <input
+              type='tel'
+              value={phone}
+              onChange={e => dispatch(setPhone(e.target.value))}
+              required
+            />
+          </label>
+          <br />
+          <label>
+            <p>Address:</p>
+            <textarea
+              value={address}
+              onChange={e => dispatch(setAddress(e.target.value))}
+              required
+            />
+          </label>
+          <br />
+          <button type='submit'>Place Order</button>
+        </form>
+
+        <MapComponent />
+      </div>
     </div>
   )
 }
