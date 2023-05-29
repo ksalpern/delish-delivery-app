@@ -76,7 +76,7 @@ const Orders = () => {
             {user.order.map(order => (
               <li key={order.id}>
                 <h4>
-                  {order.name} - ₴ {order.price}
+                  {order.name} - {order.price} ₴ - quantity {order.count}
                 </h4>
               </li>
             ))}
