@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { setShopId } from '../../redux/cart/slice'
+import { setLocations, setShopId } from '../../redux/cart/slice'
 import axios from 'axios'
 
 import ProductCard from '../../components/ProductCard/ProductCard'
@@ -21,9 +21,13 @@ const Shop = () => {
           'https://6471f2e36a9370d5a41adc0b.mockapi.io/shops/' + shopId
         )
         setShop(data)
-
         // Dispatch the setShopId action to update the Redux store
         dispatch(setShopId(shopId))
+        dispatch(setLocations(data?.locations))
+        // Save locations and shop ID in local storage
+        const jsonLocations = JSON.stringify(data?.locations)
+        localStorage.setItem('locations', jsonLocations)
+        localStorage.setItem('shopId', shopId)
       } catch (error) {
         alert('Помилка при отриманні магазину')
         navigate('/')
