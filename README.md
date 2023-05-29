@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Delish Unleashed: Eliftech's testcase Delivery Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Click [here](https://delish-ksalpern.netlify.app/) to see the web app and [here](https://www.youtube.com/watch?v=pa1cyS55OpU) to see how it looks in my computer😃
 
-## Available Scripts
+I was given a tight deadline of just three days to develop this app, but I'm thrilled with the outcome! Nearly a year ago, I applied for an opportunity at Eliftech and completed a similar task. Looking back at what I accomplished last year [here](https://github.com/ksalpern/delivery-app/tree/master), I can see significant progress in my skills. Now, the app I've built is a completely different and improved version. Initially, I struggled with deploying the app, but I've since mastered even the most advanced aspects of the task. While there are still areas where I can further enhance the app, I believe the results so far are impressive. I sincerely hope you'll enjoy it as much as I do. Thank you!
 
-In the project directory, you can run:
+## What will I see in this build
 
-### `yarn start`
+👉 a fully responsive fullstack delivery site with sass
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+👉 React.js and Redux toolkit for handling state
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+👉 you can choose a shop and add goods to the cart
 
-### `yarn test`
+👉 your order, shop Id and the shop location saves to the Local storage, so you won't lose info after reloading the page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+👉 you can only buy goods from one shop
 
-### `yarn build`
+👉 Google maps, so you can see where the shop is located and see the address after clicking to the marker
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+👉 handling the errors and success page after submitting a form with your info
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## What technologies did I use for development:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+👉 [React](https://uk.legacy.reactjs.org/)
 
-### `yarn eject`
+👉 [Redux toolkit](https://redux-toolkit.js.org/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+👉 [Mock API](https://mockapi.io/projects)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+👉 [axios](https://www.npmjs.com/package/axios)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+👉 [react-router-dom](https://reactrouter.com/en/main)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+👉 [sass](https://sass-lang.com/)
 
-## Learn More
+👉 [google-map-react](https://www.npmjs.com/package/google-map-react)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👉 [yarn](https://classic.yarnpkg.com/en/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Follow this steps to start project on your local machine:
 
-### Code Splitting
+1. Download or clone this repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. add API key :
 
-### Analyzing the Bundle Size
+ - Go to the Google Cloud Platform Console
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ - enable the "Maps JavaScript API"
 
-### Making a Progressive Web App
+ - generate an API key
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+ - add it to MapComponent (18th line)
 
-### Advanced Configuration
+3. Install its dependencies: **npm install or yarn add**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. Build the project: **npm run build or yarn build**
 
-### Deployment
+5. Start the project: **npm start or yarn start**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+6. The website is now working, hope you enjoy it 😃
