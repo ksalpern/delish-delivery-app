@@ -1,5 +1,6 @@
 .locationMarker {
   &__icon {
+    cursor: pointer;
     width: 30px;
     height: 30px;
     transform: translate(-50%, -100%);
