@@ -1,8 +1,26 @@
-.home{
+.home {
   padding: 80px 20px 30px 20px;
-  display: flex;
+  // display: flex;
   gap: 20px;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  // justify-content: space-between;
+  // align-items: center;
+  // flex-wrap: wrap;
+  &__shops {
+    padding-top: 50px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+      
+    }
+    @media (max-width: 800px) {
+      grid-template-columns: repeat(2, 1fr);
+      
+    }
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(1, 1fr);
+      
+    }
+  }
 }

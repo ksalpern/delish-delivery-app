@@ -46,8 +46,8 @@
   }
 
   &__search {
-    width: 40px;
-    height: 40px;
+    width: calc(25px + (40 - 25) * ((100vw - 320px) / (1920 - 320)));;
+    height: calc(25px + (40 - 25) * ((100vw - 320px) / (1920 - 320)));;
     cursor: pointer;
 
     img {
@@ -58,8 +58,8 @@
 
   &__cart {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: calc(25px + (40 - 25) * ((100vw - 320px) / (1920 - 320)));;
+    height: calc(25px + (40 - 25) * ((100vw - 320px) / (1920 - 320)));;
 
     img {
       width: 100%;
@@ -70,8 +70,8 @@
       position: absolute;
       top: -25%;
       right: -25%;
-      width: 25px;
-      height: 25px;
+      width: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+      height: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
       display: flex;
       align-items: center;
       justify-content: center;
